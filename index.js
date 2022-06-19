@@ -15,7 +15,10 @@ const axios = require('axios');
 var passportLocalMongoose = require('passport-local-mongoose');
 // console.log(Topic.passMarks);
 // mongodb + srv: //shagun:<password>@cluster0.v4srndy.mongodb.net/?retryWrites=true&w=majority
+require('dotenv').config()
 
+// var mongoose = require('mongoose');
+// mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://shagun:1234@cluster0.v4srndy.mongodb.net/?retryWrites=true&w=majority");
 
 // const { MongoClient, ServerApiVersion } = require('mongodb');
 // const uri = "mongodb+srv://shagun:1234@cluster0.v4srndy.mongodb.net/?retryWrites=true&w=majority";
@@ -29,8 +32,9 @@ var passportLocalMongoose = require('passport-local-mongoose');
 //     // perform actions on the collection object
 //     client.close();
 // });
-
-mongoose.connect('mongodb+srv://shagun:1234@cluster0.v4srndy.mongodb.net/?retryWrites=true&w=majority', {
+// nmp;
+const uri = "mongodb+srv://shagun:1234@cluster0.v4srndy.mongodb.net/?retryWrites=true&w=majority";
+mongoose.connect(uri, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
